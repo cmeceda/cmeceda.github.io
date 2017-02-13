@@ -51,6 +51,19 @@
           ball.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
         }
         changeColor();
+
+        document.addEventListener('keydown', function (e) {
+          if(e.keyCode == 37){
+            dx--;
+          }else if (e.keyCode == 39){
+            dx++;
+          }else if (e.keyCode == 38){
+            dy--;
+          }else if (e.keyCode == 40){
+            dy++;
+          }
+        });
+
         setInterval(function () {
             ball.style.top = y + 'px';
             ball.style.left = x + 'px';
